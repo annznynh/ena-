@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "settings": {
+    "unknown": {
+      "examples": 100,
+      "maximum_difference": 0.0
+    },
+    "known": {
+      "examples": 100,
+      "maximum_difference": 0.0
+    }
+  }
+}

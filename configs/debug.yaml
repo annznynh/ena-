@@ -1,0 +1,6 @@
+extends: base.yaml
+data:
+  sample_rows: 5000
+  chunk_size: 5000
+xgboost:
+  n_estimators: 30

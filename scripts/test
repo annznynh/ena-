@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+cd "$(dirname "$0")/.."
+scripts/run ruff check .
+scripts/run ruff format --check .
+scripts/run mypy src
+scripts/run pytest -q

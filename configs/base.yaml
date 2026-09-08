@@ -1,0 +1,97 @@
+project:
+  name: zhiji
+  seed: 42
+  timezone: UTC
+
+data:
+  dataset_handle: nicolaswattiez/skillbuilder-data-2009-2010
+  file_name: 2012-2013-data-with-predictions-4-final.csv
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_path: data/processed/interactions.parquet
+  chunk_size: 250000
+  sample_rows: 5000
+  min_history_prediction: 5
+  min_events_ena: 30
+  exclude_problem_types:
+    - open_response
+
+split:
+  train_ratio: 0.70
+  validation_ratio: 0.15
+  test_ratio: 0.15
+  seed: 42
+  version: split-v1
+
+features:
+  rolling_windows:
+    - 3
+    - 5
+    - 10
+  sequence_max_length: 20
+  include_next_context: true
+  include_behavior: true
+  include_affect: true
+
+prediction:
+  target: next_correct
+  future_horizon: 3
+  risk_medium_initial: 0.40
+  risk_high_initial: 0.65
+  threshold_selection:
+    minimum_risk_recall: 0.80
+
+xgboost:
+  objective: binary:logistic
+  n_estimators: 1200
+  learning_rate: 0.03
+  max_depth: 6
+  min_child_weight: 5
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  tree_method: hist
+  early_stopping_rounds: 50
+
+lstm:
+  embedding_skill: 32
+  embedding_other: 8
+  hidden_size: 64
+  num_layers: 1
+  dropout: 0.2
+  batch_size: 256
+  learning_rate: 0.001
+  max_epochs: 40
+  early_stopping_patience: 5
+  device: auto
+
+ena:
+  history_fraction: 0.70
+  result_fraction: 0.30
+  group_quantile_low: 0.25
+  group_quantile_high: 0.75
+  window_size_back: 4
+  sensitivity_windows:
+    - 2
+    - 4
+    - 6
+  affect_threshold: 0.50
+  affect_sensitivity:
+    - 0.33
+    - 0.50
+    - 0.67
+  slow_response_quantile: 0.75
+  weight_by: binary
+  model: EndPoint
+
+api:
+  host: 127.0.0.1
+  port: 8000
+  cors_origins:
+    - http://localhost:8501
+  max_history_items: 100
+
+artifacts:
+  root: artifacts
+  registry_path: artifacts/registry.json

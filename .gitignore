@@ -21,4 +21,15 @@ checkpoints/
 # Local configuration
 .env
 .env.*
-
+!.env.example
+.bootstrap/
+.cache/
+/data/
+/artifacts/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+renv/library/
+renv/staging/
+/reports/figures/*.html

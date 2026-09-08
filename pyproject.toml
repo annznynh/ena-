@@ -1,0 +1,57 @@
+[project]
+name = "zhiji"
+version = "0.1.0"
+description = "Student response prediction and ENA prototype"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "kagglehub[pandas-datasets,polars-datasets]>=0.3,<1",
+  "pandas>=2.3,<3",
+  "polars>=1.35,<3",
+  "pyarrow>=19,<25",
+  "numpy>=2,<3",
+  "scipy>=1.15,<2",
+  "scikit-learn>=1.7,<2",
+  "xgboost>=3.1,<3.4",
+  "torch>=2.10,<3",
+  "fastapi[standard-no-fastapi-cloud-cli]>=0.128,<1",
+  "pydantic>=2,<3",
+  "pydantic-settings>=2,<3",
+  "duckdb>=1.4,<2",
+  "plotly>=6,<7",
+  "streamlit>=1.48,<2",
+  "networkx>=3.4,<4",
+  "joblib>=1.4,<2",
+  "pyyaml>=6,<7",
+  "typer>=0.16,<1",
+  "rich>=14,<15",
+]
+
+[dependency-groups]
+dev = [
+  "types-PyYAML>=6",
+  "pytest>=8,<10",
+  "pytest-cov>=6,<8",
+  "httpx>=0.28,<1",
+  "ruff>=0.12,<1",
+  "mypy>=1.17,<2",
+  "pre-commit>=4,<5",
+]
+
+[project.scripts]
+zhiji = "zhiji.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/zhiji"]
+
+[tool.ruff]
+exclude = ["model.py", "zhiji_pipeline.py", ".bootstrap", "renv"]
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

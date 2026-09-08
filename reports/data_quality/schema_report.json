@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "raw_rows": 6123270,
+  "chunks": 25,
+  "encoding": "utf-8-sig",
+  "correct_values": {
+    "1": 4141564,
+    "0": 1976383,
+    "0.5": 2395,
+    "0.75": 1629,
+    "0.25": 1211,
+    "0.6": 24,
+    "0.85": 10,
+    "0.975": 24,
+    "0.875": 6,
+    "0.375": 1,
+    "0.65": 10,
+    "0.95": 9,
+    "0.625": 4
+  },
+  "missing_ratios": {
+    "problem_log_id": 0.0,
+    "skill": 0.5704778655848918,
+    "problem_id": 0.0,
+    "user_id": 0.0,
+    "assignment_id": 0.0,
+    "start_time": 0.0,
+    "end_time": 0.0,
+    "problem_type": 0.0,
+    "original": 0.0,
+    "correct": 0.0,
+    "bottom_hint": 0.009855518374985914,
+    "hint_count": 0.0,
+    "attempt_count": 0.0,
+    "ms_first_response": 0.0,
+    "tutor_mode": 0.0,
+    "sequence_id": 0.0,
+    "position": 0.0,
+    "skill_id": 0.5571299322094241,
+    "overlap_time": 0.0,
+    "first_action": 0.0,
+    "problemlogid": 0.0,
+    "Average_confidence(FRUSTRATED)": 0.0,
+    "Average_confidence(CONFUSED)": 0.0,
+    "Average_confidence(CONCENTRATING)": 0.0,
+    "Average_confidence(BORED)": 0.0
+  },
+  "value_issues": {
+    "open_response": 17642,
+    "invalid:start_time": 0,
+    "invalid:end_time": 0
+  },
+  "affect_ranges": {
+    "Average_confidence(FRUSTRATED)": [
+      0.361323,
+      0.867133
+    ],
+    "Average_confidence(CONFUSED)": [
+      0.0,
+      1.0
+    ],
+    "Average_confidence(CONCENTRATING)": [
+      0.170732,
+      0.766925
+    ],
+    "Average_confidence(BORED)": [
+      0.0,
+      1.0
+    ]
+  },
+  "parse_failures": 0,
+  "log_id_mismatches": 0
+}

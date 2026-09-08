@@ -1,0 +1,162 @@
+[
+  {
+    "version": "ena-w2-a0.5-6c0b2274b41e",
+    "window": 2,
+    "affect": 0.5,
+    "permutation_p": 0.000999000999000999,
+    "key_edges": [
+      {
+        "source": "incorrect",
+        "target": "hint_used",
+        "weight": 0.1164645623269331,
+        "ci_low": 0.1122878656618302,
+        "ci_high": 0.1207037091156809,
+        "_row": "incorrect & hint_used"
+      },
+      {
+        "source": "repeated_attempt",
+        "target": "slow_response",
+        "weight": 0.01930464128901084,
+        "ci_low": 0.01587155940772678,
+        "ci_high": 0.0228672493006662,
+        "_row": "repeated_attempt & slow_response"
+      },
+      {
+        "source": "frustrated",
+        "target": "confused",
+        "weight": -0.009840158494027217,
+        "ci_low": -0.01078101973765157,
+        "ci_high": -0.008842071592599794,
+        "_row": "frustrated & confused"
+      }
+    ]
+  },
+  {
+    "version": "ena-w4-a0.33-d42210edfeb8",
+    "window": 4,
+    "affect": 0.33,
+    "permutation_p": 0.000999000999000999,
+    "key_edges": [
+      {
+        "source": "incorrect",
+        "target": "hint_used",
+        "weight": 0.06052507963339834,
+        "ci_low": 0.0587217307030248,
+        "ci_high": 0.06227987440992719,
+        "_row": "incorrect & hint_used"
+      },
+      {
+        "source": "repeated_attempt",
+        "target": "slow_response",
+        "weight": 0.02359402463269526,
+        "ci_low": 0.02192747443264119,
+        "ci_high": 0.02525879042637591,
+        "_row": "repeated_attempt & slow_response"
+      },
+      {
+        "source": "frustrated",
+        "target": "confused",
+        "weight": -0.01972827926409293,
+        "ci_low": -0.02170505629648948,
+        "ci_high": -0.01759520993841918,
+        "_row": "frustrated & confused"
+      }
+    ]
+  },
+  {
+    "version": "ena-w4-a0.5-6c0b2274b41e",
+    "window": 4,
+    "affect": 0.5,
+    "permutation_p": 0.000999000999000999,
+    "key_edges": [
+      {
+        "source": "incorrect",
+        "target": "hint_used",
+        "weight": 0.1001570238276114,
+        "ci_low": 0.09684048195236976,
+        "ci_high": 0.1035507969828712,
+        "_row": "incorrect & hint_used"
+      },
+      {
+        "source": "repeated_attempt",
+        "target": "slow_response",
+        "weight": 0.02394022657467604,
+        "ci_low": 0.02037144521048773,
+        "ci_high": 0.027390076588151,
+        "_row": "repeated_attempt & slow_response"
+      },
+      {
+        "source": "frustrated",
+        "target": "confused",
+        "weight": -0.01062789123631326,
+        "ci_low": -0.01156102746750961,
+        "ci_high": -0.009697670210269854,
+        "_row": "frustrated & confused"
+      }
+    ]
+  },
+  {
+    "version": "ena-w4-a0.67-9967a73dfd1d",
+    "window": 4,
+    "affect": 0.67,
+    "permutation_p": 0.000999000999000999,
+    "key_edges": [
+      {
+        "source": "incorrect",
+        "target": "hint_used",
+        "weight": 0.1058897233507149,
+        "ci_low": 0.1023534792255986,
+        "ci_high": 0.1093847439598785,
+        "_row": "incorrect & hint_used"
+      },
+      {
+        "source": "repeated_attempt",
+        "target": "slow_response",
+        "weight": 0.02630140505384954,
+        "ci_low": 0.02249928808026262,
+        "ci_high": 0.02989738136837771,
+        "_row": "repeated_attempt & slow_response"
+      },
+      {
+        "source": "frustrated",
+        "target": "confused",
+        "weight": -0.01078807927449127,
+        "ci_low": -0.01166858964962857,
+        "ci_high": -0.009848420189845645,
+        "_row": "frustrated & confused"
+      }
+    ]
+  },
+  {
+    "version": "ena-w6-a0.5-6c0b2274b41e",
+    "window": 6,
+    "affect": 0.5,
+    "permutation_p": 0.000999000999000999,
+    "key_edges": [
+      {
+        "source": "incorrect",
+        "target": "hint_used",
+        "weight": 0.09298816663695063,
+        "ci_low": 0.08981168014836469,
+        "ci_high": 0.09620442777675006,
+        "_row": "incorrect & hint_used"
+      },
+      {
+        "source": "repeated_attempt",
+        "target": "slow_response",
+        "weight": 0.02514640051940796,
+        "ci_low": 0.02168751400690756,
+        "ci_high": 0.02861567030804705,
+        "_row": "repeated_attempt & slow_response"
+      },
+      {
+        "source": "frustrated",
+        "target": "confused",
+        "weight": -0.01066733620668774,
+        "ci_low": -0.01159296278924941,
+        "ci_high": -0.009713260796999312,
+        "_row": "frustrated & confused"
+      }
+    ]
+  }
+]
